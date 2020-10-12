@@ -1,0 +1,18 @@
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    ViewData["Title"] = "Pagina de ingreso";
+}
+
+<div class="row justify-content-center" style="height: 80vh;">
+    <div class="col-sm-4 align-self-center text-center">
+        <form class="bg-dark d-flex flex-column align-items-center px-3 py-2" style="height: 55vh;
+         box-shadow: 3px 3px 8px rgba(0,0,0,.7);">
+            <h4 class="text-light p-2 font-weight-bold">Login</h4>
+            <input class="w-100 p-3 m-2 border-0 rounded text-center" type="text" placeholder="Ingrese su usuario">
+            <input class="w-100 p-3 m-2 border-0 rounded text-center" type="password" placeholder="Contraseña">
+            <a class="p-2" href="#" style="color: #E3F3D5;">¿Recuperar contraseña?</a>
+            <input class="p-3 w-75 my-3 rounded border-0 text-light font-weight-bold" type="submit" value="Ingresar" style="background: #556B2F;">
+        </form>
+        <a asp-controller="Home" asp-action="Index">home</a>
+    </div>
+</div>
