@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>@ViewData["Title"] - Semillero USC</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
+
+    <body style="font-family: Arial, sans-serif; height: 100vh; background-image: linear-gradient(180deg, white, #E3DADA);">
+        <nav class="d-flex w-100 align-items-center justify-content-center p-3" style="box-shadow: 2px 2px 5px rgba(0,0,0,.3);">
+            <a class="text-muted font-weight-bold" style="font-size: 25px;" asp-controller="Login" asp-action="Index">Semillero USC</a>
+        </nav>
+
+        <main class="container" style="height: 84vh;">
+            @RenderBody()
+        </main>
+
+        <footer class="text-center text-muted d-flex justify-content-center">
+            <div class="border-bottom w-50">
+                &copy; 2020 - Semillero USC
+            </div>
+        </footer>
+    </body>
+</html>

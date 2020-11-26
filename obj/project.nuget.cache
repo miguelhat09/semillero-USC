@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ibPzMLjf7He50PT+lMIzj///t0RQfwzxe1+0sqvU5JtIUyW15NADE8rhv1nl492378OMQ9cscFZqFr0jP8CFNA==",
   "success": true,
   "projectFilePath": "D:\\WebApp1\\WebApp1.csproj",
@@ -183,5 +184,11 @@
     "C:\\Users\\aleja\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "OO4b61xzYKOBqu3t0P6ElyvlMYnhJFgkNPd6kNPkJZVHXOF3jDq008QVRifJhSPOy4sZkLSUYt9Q22GJ4U6yQw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\migue\\OneDrive\\Documents\\usc\\Quinto Semestre\\web.NET\\proyectoFinal\\semilleroUSC\\SemilleroUSC.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
   "logs": []
 }

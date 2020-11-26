@@ -7,7 +7,11 @@
             "type": "process",
             "args": [
                 "build",
+<<<<<<< HEAD
                 "${workspaceFolder}/WebApp1.csproj",
+=======
+                "${workspaceFolder}/SemilleroUSC.csproj",
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +23,11 @@
             "type": "process",
             "args": [
                 "publish",
+<<<<<<< HEAD
                 "${workspaceFolder}/WebApp1.csproj",
+=======
+                "${workspaceFolder}/SemilleroUSC.csproj",
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +40,11 @@
             "args": [
                 "watch",
                 "run",
+<<<<<<< HEAD
                 "${workspaceFolder}/WebApp1.csproj",
+=======
+                "${workspaceFolder}/SemilleroUSC.csproj",
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

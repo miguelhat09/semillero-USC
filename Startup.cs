@@ -3,17 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using WebApp1.Data;
+=======
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+<<<<<<< HEAD
 namespace WebApp1
+=======
+namespace SemilleroUSC
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
 {
     public class Startup
     {
@@ -27,6 +36,7 @@ namespace WebApp1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+<<<<<<< HEAD
 
             //aqui moví cosas
             
@@ -75,6 +85,9 @@ namespace WebApp1
 
             
 
+=======
+            services.AddControllersWithViews();
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,6 +96,7 @@ namespace WebApp1
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+<<<<<<< HEAD
                 app.UseDatabaseErrorPage();
             }
             else
@@ -92,17 +106,36 @@ namespace WebApp1
                 app.UseHsts();
             }
 
+=======
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
+<<<<<<< HEAD
             
             app.UseAuthentication();
+=======
+
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+<<<<<<< HEAD
                 endpoints.MapRazorPages();
+=======
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Login}/{action=Index}/{id?}");
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
             });
         }
     }

@@ -1,6 +1,7 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< HEAD
     ".NETCoreApp,Version=v3.1": {
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
         "type": "package",
@@ -9189,10 +9190,21 @@
   },
   "packageFolders": {
     "C:\\Users\\aleja\\.nuget\\packages\\": {}
+=======
+    ".NETCoreApp,Version=v3.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": []
+  },
+  "packageFolders": {
+    "C:\\Users\\migue\\.nuget\\packages\\": {}
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\WebApp1\\WebApp1.csproj",
       "projectName": "WebApp1",
       "projectPath": "D:\\WebApp1\\WebApp1.csproj",
@@ -9201,6 +9213,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aleja\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\migue\\OneDrive\\Documents\\usc\\Quinto Semestre\\web.NET\\proyectoFinal\\SemilleroUSC\\SemilleroUSC.csproj",
+      "projectName": "SemilleroUSC",
+      "projectPath": "C:\\Users\\migue\\OneDrive\\Documents\\usc\\Quinto Semestre\\web.NET\\proyectoFinal\\SemilleroUSC\\SemilleroUSC.csproj",
+      "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\migue\\OneDrive\\Documents\\usc\\Quinto Semestre\\web.NET\\proyectoFinal\\SemilleroUSC\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\migue\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9221,6 +9243,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+<<<<<<< HEAD
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
@@ -9251,6 +9274,8 @@
             "version": "[3.1.4, )"
           }
         },
+=======
+>>>>>>> 86ebea09369da69504054bbe768b5fbe9955545b
         "imports": [
           "net461",
           "net462",
