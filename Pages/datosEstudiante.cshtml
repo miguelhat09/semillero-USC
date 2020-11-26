@@ -1,0 +1,118 @@
+@page
+@model datosEstudianteModel
+@{
+    ViewData["Title"] = "Datos estudiante";
+}
+ <h3>@ViewData["Title"]</h3>  
+
+
+
+
+<div class="container">
+
+
+<div class="card col-6 " >
+  <!-- <img class="card-img-top"  src="https://images.squarespace-cdn.com/content/52d634b1e4b0876636f82abb/1542210895319-8DF042499CH2DZTF2TQM/instituto-de-idiomas-universidad-santiago-de-cali-escuela-de-idiomas-cali-logo.png?content-type=image%2Fpng" alt="Card image cap">  -->
+  <div class="card-body">
+    
+
+      <form method="post">
+        <div asp-validation-summary="All"  class="text-danger" >
+            <div class="container" >
+
+                <div class="form-group ">
+                    <div class="row">
+                        <div class="col-sm-2 text-dark">
+                            <label asp-for="Estudiante.nombreEstudiante"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Estudiante.nombreEstudiante" class="form-control form-control-lg">
+                            
+                        </div>
+                        <span asp-validation-for="Estudiante.nombreEstudiante" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 text-dark">
+                            <label asp-for="Estudiante.cedulaEstudiante"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Estudiante.cedulaEstudiante" class="form-control form-control-lg" type="number">
+                            
+                        </div>
+                        <span asp-validation-for="Estudiante.cedulaEstudiante" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 text-dark">
+                            <label asp-for="Estudiante.carreraEstudiante"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Estudiante.carreraEstudiante" class="form-control form-control-lg ">
+                            
+                        </div>
+                        <span asp-validation-for="Estudiante.carreraEstudiante" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 text-dark">
+                            <label asp-for="Estudiante.numeroEstudiante"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Estudiante.numeroEstudiante" class="form-control form-control-lg " type="number">
+                            
+                        </div>
+                        <span asp-validation-for="Estudiante.numeroEstudiante" class="text-danger"></span>
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 text-dark">
+                            <label asp-for="Estudiante.semestreEstudiante"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Estudiante.semestreEstudiante" class="form-control form-control-lg " type="number">
+                            
+                        </div>
+                        <span asp-validation-for="Estudiante.semestreEstudiante" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <input type="hidden" asp-for="Estudiante.correoEstudiante" value="@User.Identity.Name" >
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-12 offset-sm-12">
+                            <input type="submit" value="Actualizar Datos Estudiante" class="btn btn-success form-control">
+                        </div>
+                        <div class="col-sm-2">
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+

@@ -1,0 +1,26 @@
+@page
+@model verInteresados
+@{
+    ViewData["Title"] = "A quienes les interesa mi semillero";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+<div class="container">
+
+    
+    <form method="post">
+        <div asp-validation-summary="All"  class="text-danger" >
+            <input type="hidden" asp-for="Semillero.idSemillero" >
+            <div class="container">
+
+                <input asp-for="Semillero.interesadosSemillero" class="form-control" readonly>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
