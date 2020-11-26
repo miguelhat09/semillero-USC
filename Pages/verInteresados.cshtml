@@ -1,26 +1,38 @@
 @page
-@model verInteresados
+@model verInteresados 
+
 @{
     ViewData["Title"] = "A quienes les interesa mi semillero";
+    Layout = "~/Pages/Shared/_LayoutRegistro.cshtml";
 }
-<h1>@ViewData["Title"]</h1>
 
+<nav class="unirme-nav">
+    <div></div>
+    <h1>Interesados en el semillero</h1>
+    <div>
+        <a asp-area="" asp-page="/Index">Regresar</a>
+    </div>
+</nav>
 
-
-<div class="container">
-
-    
-    <form method="post">
-        <div asp-validation-summary="All"  class="text-danger" >
-            <input type="hidden" asp-for="Semillero.idSemillero" >
-            <div class="container">
-
-                <input asp-for="Semillero.interesadosSemillero" class="form-control" readonly>
-
-            </div>
-        </div>
-
+<div class="main-form">
+    <div class="crear-centrar">         
+    <form method="post" class="unirme-form">
+        <input type="hidden" asp-for="Semillero.idSemillero" >
+        <input asp-for="Semillero.interesadosSemillero" class="unirme-input2" readonly>
     </form>
-
-
+    </div>
 </div>
+
+<footer class="footer">
+    <span>2020 todos los derechos reservados</span>
+</footer>
+
+<script>
+    window.sr = ScrollReveal();
+
+    sr.reveal('.unirme-input2', {
+        duration: 1500,
+        origin: 'bottom',
+        distance: '40px'
+    });
+</script>

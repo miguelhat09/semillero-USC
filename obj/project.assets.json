@@ -9188,19 +9188,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aleja\\.nuget\\packages\\": {}
+    "C:\\Users\\migue\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WebApp1\\WebApp1.csproj",
+      "projectUniqueName": "C:\\Users\\migue\\OneDrive\\Documents\\USC\\Quinto Semestre\\web.NET\\proyectoFinal\\WebApp1\\WebApp1.csproj",
       "projectName": "WebApp1",
-      "projectPath": "D:\\WebApp1\\WebApp1.csproj",
-      "packagesPath": "C:\\Users\\aleja\\.nuget\\packages\\",
-      "outputPath": "D:\\WebApp1\\obj\\",
+      "projectPath": "C:\\Users\\migue\\OneDrive\\Documents\\USC\\Quinto Semestre\\web.NET\\proyectoFinal\\WebApp1\\WebApp1.csproj",
+      "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\migue\\OneDrive\\Documents\\USC\\Quinto Semestre\\web.NET\\proyectoFinal\\WebApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aleja\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\migue\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

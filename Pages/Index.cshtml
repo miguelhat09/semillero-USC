@@ -1,7 +1,11 @@
 ﻿@page
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @model IndexModel
 @{
     ViewData["Title"] = "Semilleros";
+    Layout = "~/Pages/Shared/_LayoutRegistro.cshtml";
 }
 
 @if (Model.Mensaje != null)
@@ -17,58 +21,98 @@
     </div>
 }
 
-<form method="POST">
-@if(Model.Semilleros.Count() > 0){
+<nav class="home-nav">
+  <h1>Semilleros USC</h1>
+  <div></div>
+  
+  <div class="home-nav-links">
+      <div>
+        <a class="home-nav-enlace" asp-area="" asp-page="/datosEstudiante">Mí Perfil</a>
+        <a class="home-nav-enlace" asp-area="" asp-page="/crearSemillero">Crear Semillero</a>
+        <a class="home-nav-enlace" asp-area="" asp-page="/Acciones">Acciones</a>
+      </div>
+      
+      @if (SignInManager.IsSignedIn(User))
+      {
+        <div>
+          <p class="enlace-bienvenido" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Bienvenido - @User.Identity.Name!</p>
 
-  <br>
-  <table class="table table-striped border table-hover">
-      <tr class="table-success">
-          <th>
-            @Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().nombreSemillero)
-          </th>
-          <th>
-            @Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().descripcionSemillero)
-          </th>
-          <th>
-            @Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().necesidadesSemillero)
-          </th>
-          <th>
-            Acciones
-          </th>
-
-      </tr>
-
-      @foreach (var item in Model.Semilleros)
-      {        
-          <tr>
-            <td>
-              @Html.DisplayFor(m => item.nombreSemillero)
-            </td>
-            <td>
-              @Html.DisplayFor(m => item.descripcionSemillero)
-            </td>
-            <td>
-              @Html.DisplayFor(m => item.necesidadesSemillero)
-            </td>
-            <td>
-              <button asp-page-handler="Delete" asp-route-id="@item.idSemillero" onclick="return confirm('¿Si quieres eliminar el semillero?')" class="btn btn-primary btn-sm">Eliminar</button>
-              <br><br>
-              <a asp-route-id = "@item.idSemillero" asp-page ="edit" class="btn btn-dark btn-sm">Editar</a>
-              <br><br>
-              <a asp-route-id = "@item.idSemillero" asp-page ="Interesado" class="btn btn-success btn-sm">Unirme</a>
-              <br><br>
-              <a asp-route-id = "@item.idSemillero" asp-page ="verInteresados" class="btn btn-dark btn-sm">Interesados</a>
-            </td>
-          </tr>
+          <form style="display: grid; align-items: start;" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post" >
+              <input class="enlace-cerrar" type="submit" value="Cerrar Sesión">
+          </form>
+        </div>
+      }
+      else
+      {
+          
+        <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Register">Registrate</a>
+    
+        <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Login">Inicia sesión</a>
 
       }
 
-  </table>
+  </div>
+</nav>
 
-}else{
+<form method="POST">
+  <main class="home-main">
 
-  <p>No hay semilleros o eventos nuevos</p>
+  @if(Model.Semilleros.Count() > 0){
+    
+    //@Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().nombreSemillero)
+    
+    //@Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().descripcionSemillero)
 
-}
+    //@Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().necesidadesSemillero)
 
+        @foreach (var item in Model.Semilleros)
+        {        
+          <div class="home-semillero">
+            <h3>
+              @Html.DisplayFor(m => item.nombreSemillero)
+            </h3>
+            <p>
+              @Html.DisplayFor(m => item.descripcionSemillero)
+            </p>
+
+            <div class="home-semillero-centrar">
+              <div class="home-semillero-desc">
+                <p>
+                  @Html.DisplayFor(m => item.necesidadesSemillero)
+                </p>
+              </div>
+              
+              <div class="home-semillero-botones"> 
+                <a asp-route-id = "@item.idSemillero" asp-page ="Interesado" class="unirme">Unirme</a>
+                
+                <a asp-route-id = "@item.idSemillero" asp-page ="verInteresados" class="interesados">Interesados</a>
+              </div>
+            </div>
+          </div>
+        }
+
+  }else{
+
+    <p>No hay semilleros o eventos nuevos</p>
+
+  }
+ 
+  </main>
 </form>
+
+<footer class="home-footer">
+    <span>2020 todos los derechos reservados</span>
+</footer>
+
+<script>
+    window.sr = ScrollReveal();
+
+    sr.reveal('.home-semillero', {
+        duration: 1500,
+
+    });
+    
+    sr.reveal('.home-semillero1', {
+        duration: 2500,
+    });
+</script>

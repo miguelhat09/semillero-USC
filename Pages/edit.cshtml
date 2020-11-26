@@ -2,78 +2,50 @@
 @model EditModel
 @{
     ViewData["Title"] = "EditarSemillero";
+    Layout = "~/Pages/Shared/_LayoutRegistro.cshtml";
 }
-<h1>@ViewData["Title"]</h1>
 
+<nav class="unirme-nav">
+    <div></div>
+    <h1>Editar Semillero</h1>
+    <div>
+        <a asp-area="" asp-page="/Acciones">Regresar</a>
+    </div>
+</nav>
 
+    <div class="main-form">
+    <div class="crear-centrar">    
+        <form method="post" class="form-semillero">
 
-<div class="container">
-
-    
-    <form method="post">
-        <div asp-validation-summary="All"  class="text-danger" >
             <input type="hidden" asp-for="Semillero.idSemillero" >
-            <div class="container" >
 
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <label asp-for="Semillero.nombreSemillero"></label>
-                        </div>
-                        <div class="col-sm-4">
-                            <input asp-for="Semillero.nombreSemillero" class="form-control">
-                            
-                        </div>
-                        <span asp-validation-for="Semillero.nombreSemillero" class="text-danger"></span>
-                    </div>
-                </div>
+            <input asp-for="Semillero.nombreSemillero" class="input" placeholder="Nombre del semillero">
+            <span asp-validation-for="Semillero.nombreSemillero" class="text-danger"></span>
 
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <label asp-for="Semillero.descripcionSemillero"></label>
-                        </div>
-                        <div class="col-sm-4">
-                            <input asp-for="Semillero.descripcionSemillero" class="form-control">
-                            
-                        </div>
-                        <span asp-validation-for="Semillero.descripcionSemillero" class="text-danger"></span>
-                    </div>
-                </div>
+            <input asp-for="Semillero.descripcionSemillero" class="input" placeholder="Descripcion del semillero">
+            <span asp-validation-for="Semillero.descripcionSemillero" class="text-danger"></span>
 
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <label asp-for="Semillero.necesidadesSemillero"></label>
-                        </div>
-                        <div class="col-sm-4">
-                            <input asp-for="Semillero.necesidadesSemillero" class="form-control">
-                            
-                        </div>
-                        <span asp-validation-for="Semillero.necesidadesSemillero" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-2 offset-sm-2">
-                            <input type="submit" value="Modificar Semillero" class="btn btn-primary form-control">
-                        </div>
-                        <div class="col-sm-2">
-                            
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </form>
-
-
+            <input asp-for="Semillero.necesidadesSemillero" class="input" placeholder="Temas de investigación">
+            <span asp-validation-for="Semillero.necesidadesSemillero" class="text-danger"></span>
+                    
+            <input type="submit" value="Guardar Cambios" class="boton-unirme">
+        </form>
+    </div>
 </div>
+    
 
+<footer class="footer">
+    <span>2020 todos los derechos reservados</span>
+</footer>
+
+<script>
+    window.sr = ScrollReveal();
+
+    sr.reveal('.boton-unirme', {
+        duration: 1500,
+        origin: 'bottom',
+        distance: '40px'
+    });
+</script>
 
 <!-- FALTA ALGO DEL TUTORIAL [8] MINUTO 6:00 -->

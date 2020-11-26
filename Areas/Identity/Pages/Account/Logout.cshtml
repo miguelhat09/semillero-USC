@@ -2,9 +2,16 @@
 @model LogoutModel
 @{
     ViewData["Title"] = "Cerraste sesión correctamente";
+    Layout = "~/Pages/Shared/_LayoutRegistro.cshtml";
 }
 
-<header>
-    <h1>@ViewData["Title"]</h1>
-    <p>Puedes mover el menú arriba.</p>
-</header>
+<main class="main-login text-center">
+    <div class="row justify-content-center w-100" style="height: 80vh;">
+        <div class="col-sm-5 text-center d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
+            <header>
+                <h1>@ViewData["Title"]</h1>
+                <a asp-area="Identity" asp-page="/Account/Login" class="logout-enlaces">Iniciar Sesión</a>
+            </header>
+        </div>
+    </div>
+</main>

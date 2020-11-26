@@ -1,0 +1,90 @@
+﻿@page
+
+@{
+    ViewData["Title"] = "Landing Page";
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
+}
+
+<div class="body">
+    <span id="inicio"></span>
+    <nav class="landing-nav">
+        <a href="https://www.usc.edu.co/"><img src="images/icono-usc.png"></a>
+        <div></div>
+        <div class="landing-navlist">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sabermas">Saber más</a></li>
+                <li><a asp-area="" asp-page="/Index">Aplicación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="principal">
+        <div class="landing-centrar">
+            <div class="landing-seccion1">
+                <div class="overlay">
+                    .
+                </div>
+            </div>
+        
+            <div class="landing-seccion2">
+                <div class="landing-dtext">
+                    <h1>ÚNETE A UN GRUPO DE INVESTIGACIÓN</h1>
+                    <a href="#sabermas">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="principal2">
+        <div class="principal2-center">
+            <p>
+                Los semilleros de investigación son espacios que buscan despertar y desarrollar 
+                el espíritu investigativo de los estudiantes, fomentando la capacidad de indagación y 
+                búsqueda hacia la comprensión crítica de los procesos comunicativos, potenciando el 
+                pensamiento autónomo que le permita la formulación de problemas y alternativas de solución.</p>
+        </div>
+        <div class="principal2-directores">
+            <div class="directores">
+                <img src="images/Luz_Caicedo_elipse.jpg">
+                <h5>Luz Dary Caicedo</h5>
+                <p>Licenciada en Ciencias de la Educación y Especialista en Docencia para la Educación Superior (Universidad Santiago de Cali). 
+                    Magister en Microbiología (Universidad del Valle) y estudiante de Maestría en Micología Médica (Universidad Nacional del Nordeste –UNNE-).
+                </p>  
+            </div>
+            <div class="directores">
+                <img src="images/claudia-2-1.png">
+                <h5>Claudia Liliana Zuñiga Cañon</h5>
+                <p>Directora de COMBA I+D, Profesora e investigadora con más de 10 años de experiencia en informática móvil. Estudios de pregrado en Ingeniería de sistemas y 
+                    telemática (1997-2003) en la Universidad Santiago de Cali (Colombia), maestría en ingeniería Telemática (2006-2007) en la Universidad de Vigo (España). 
+                    </p>
+            </div>
+            <div class="directores">
+                <img src="images/AlbaCorrales.jpg">
+                <h5>Alba Rocio Corrales Ducuara</h5>
+                <p id="sabermas">Maestría en Biotecnología agroforestal, Universidad Politécnica de Madrid, España. Doctorado en Biotecnología y recursos 
+                    genéticos de plantas y microorganismos asociados, Universidad Politécnica de Madrid, España. Actualmente es la líder del Grupo de Investigación en Microbiología, 
+                    Industria y Ambiente (GIMIA).</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</div>>
+
+
+
+
+
+
+

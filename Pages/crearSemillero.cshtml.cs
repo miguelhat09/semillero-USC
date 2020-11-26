@@ -31,7 +31,6 @@ namespace WebApp1.Pages
             _db = db;
         }  
 
-
         [BindProperty]
         public  Semillero Semillero {get;set;}
 

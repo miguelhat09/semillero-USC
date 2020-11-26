@@ -1,0 +1,93 @@
+@page
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model AccionesModel
+@{
+    ViewData["Title"] = "Semilleros";
+    Layout = "~/Pages/Shared/_LayoutRegistro.cshtml";
+}
+
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close"> 
+
+          <span aria-hidden="true">&times;</span>
+
+        </button>
+
+        @Model.Mensaje
+    </div>
+}
+
+<nav class="acciones-nav">
+  <div></div>
+  <h1>Acciones Administrador</h1>
+  <div>
+      <a asp-area="" asp-page="/Index">Regresar</a>
+  </div>
+</nav>
+
+<form method="POST">
+  <main class="home-main">
+
+  @if(Model.Semilleros.Count() > 0){
+    
+    //@Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().nombreSemillero)
+    
+    //@Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().descripcionSemillero)
+
+    //@Html.DisplayNameFor(m => m.Semilleros.FirstOrDefault().necesidadesSemillero)
+
+        @foreach (var item in Model.Semilleros)
+        {        
+          <div class="home-semillero">
+            <h3>
+              @Html.DisplayFor(m => item.nombreSemillero)
+            </h3>
+            <p>
+              @Html.DisplayFor(m => item.descripcionSemillero)
+            </p>
+
+            <div class="home-semillero-centrar">
+              <div class="home-semillero-desc">
+                <p>
+                  @Html.DisplayFor(m => item.necesidadesSemillero)
+                </p>
+              </div>
+              
+              <div class="home-semillero-botones"> 
+
+                <button asp-page-handler="Delete" asp-route-id="@item.idSemillero" onclick="return confirm('¿Si quieres eliminar el semillero?')" class="interesados" style=" background: #C20000; border: none;">Eliminar</button>
+                <a asp-route-id = "@item.idSemillero" asp-page ="edit" class="unirme">Editar</a>
+              </div>
+            </div>
+          </div>
+        }
+
+  }else{
+
+    <p>No hay semilleros o eventos nuevos</p>
+
+  }
+ 
+  </main>
+</form>
+
+<footer class="home-footer">
+    <span>2020 todos los derechos reservados</span>
+</footer>
+
+<script>
+    window.sr = ScrollReveal();
+
+    sr.reveal('.home-semillero', {
+        duration: 1500,
+
+    });
+    
+    sr.reveal('.home-semillero1', {
+        duration: 2500,
+    });
+</script>
