@@ -1,4 +1,4 @@
-# semillero-USC
+# Semillero-USC
 
 Descripción:
 Semilleros USC es un proyecto para la clase de Dotnet de la Universidad Santiago de Cali, 
