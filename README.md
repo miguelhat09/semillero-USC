@@ -24,3 +24,6 @@ Integrantes:
 -Alejandro Marin
 -Miguel Angel Serrate
 -Camila Urbano
+
+<img src="https://github.com/miguelhat09/semillero-USC/blob/master/imagen.jpeg">
+
